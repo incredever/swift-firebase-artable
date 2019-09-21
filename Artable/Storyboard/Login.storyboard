@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="B95-mo-dd1">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_left1" translatesAutoresizingMaskIntoConstraints="NO" id="qyz-jE-BrZ">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375.00000000000045" height="812"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="bCP-sH-XMJ">
                                 <rect key="frame" x="20" y="117.99999999999997" width="335" height="371.33333333333326"/>
@@ -76,6 +76,9 @@
                                         <state key="normal" title="Create new user">
                                             <color key="titleColor" red="0.95294117647058818" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="mCc-AD-c8f" kind="show" id="Drn-PS-dQ7"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJQ-JO-3Uv">
                                         <rect key="frame" x="0.0" y="323.33333333333331" width="335" height="48"/>
@@ -127,7 +130,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="zHL-Hd-bJX">
-                                <rect key="frame" x="20" y="74" width="335" height="327.33333333333331"/>
+                                <rect key="frame" x="20" y="117.99999999999997" width="335" height="327.33333333333326"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9eD-2B-4Ab">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="22.333333333333332"/>
@@ -136,7 +139,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gQw-B6-t4r">
-                                        <rect key="frame" x="0.0" y="35.333333333333329" width="335" height="48"/>
+                                        <rect key="frame" x="0.0" y="35.333333333333343" width="335" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="Uea-84-ZBR"/>
                                         </constraints>
@@ -154,7 +157,7 @@
                                         <textInputTraits key="textInputTraits" textContentType="email"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jei-dX-1Uh">
-                                        <rect key="frame" x="0.0" y="157.33333333333334" width="335" height="48"/>
+                                        <rect key="frame" x="0.0" y="157.33333333333331" width="335" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="PVs-4M-hy9"/>
                                         </constraints>
@@ -185,18 +188,18 @@
                                 </subviews>
                             </stackView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="TXx-3w-SoV">
-                                <rect key="frame" x="169" y="426.33333333333331" width="37" height="37"/>
+                                <rect key="frame" x="169" y="470.33333333333331" width="37" height="37"/>
                                 <color key="color" red="0.2274509804" green="0.2666666667" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red_check" translatesAutoresizingMaskIntoConstraints="NO" id="MEH-RL-tdD">
-                                <rect key="frame" x="319" y="242.33333333333334" width="26" height="26.000000000000028"/>
+                                <rect key="frame" x="318" y="286.33333333333331" width="26" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="26" id="avj-Ix-gqO"/>
                                     <constraint firstAttribute="height" constant="26" id="ogE-hz-6Pc"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red_check" translatesAutoresizingMaskIntoConstraints="NO" id="Do4-qG-tub">
-                                <rect key="frame" x="319" y="303.33333333333331" width="26" height="26"/>
+                                <rect key="frame" x="318" y="347.33333333333331" width="26" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="26" id="TKm-kf-8ib"/>
                                     <constraint firstAttribute="height" constant="26" id="v4Y-gU-tTk"/>
@@ -208,8 +211,8 @@
                             <constraint firstItem="Cen-Ux-i3P" firstAttribute="top" secondItem="GXq-MJ-n6v" secondAttribute="top" id="0nW-Dq-edi"/>
                             <constraint firstItem="TXx-3w-SoV" firstAttribute="top" secondItem="zHL-Hd-bJX" secondAttribute="bottom" constant="25" id="EHe-Ei-XxH"/>
                             <constraint firstItem="zHL-Hd-bJX" firstAttribute="top" secondItem="C7Q-Og-5w1" secondAttribute="top" constant="30" id="Hay-3a-GTi"/>
-                            <constraint firstItem="MEH-RL-tdD" firstAttribute="trailing" secondItem="jei-dX-1Uh" secondAttribute="trailing" constant="-10" id="NaT-hq-rJa"/>
-                            <constraint firstItem="Do4-qG-tub" firstAttribute="trailing" secondItem="yG6-an-ciB" secondAttribute="trailing" constant="-10" id="Pef-tQ-sZf"/>
+                            <constraint firstItem="MEH-RL-tdD" firstAttribute="trailing" secondItem="jei-dX-1Uh" secondAttribute="trailing" constant="-11" id="NaT-hq-rJa"/>
+                            <constraint firstItem="Do4-qG-tub" firstAttribute="trailing" secondItem="yG6-an-ciB" secondAttribute="trailing" constant="-11" id="Pef-tQ-sZf"/>
                             <constraint firstItem="TXx-3w-SoV" firstAttribute="centerX" secondItem="GXq-MJ-n6v" secondAttribute="centerX" id="XCk-TE-5da"/>
                             <constraint firstItem="C7Q-Og-5w1" firstAttribute="trailing" secondItem="zHL-Hd-bJX" secondAttribute="trailing" constant="20" id="gfI-mI-ywa"/>
                             <constraint firstAttribute="trailing" secondItem="Cen-Ux-i3P" secondAttribute="trailing" id="q0X-iN-HbZ"/>
@@ -229,7 +232,7 @@
         <!--Navigation Controller-->
         <scene sceneID="7Tg-me-05R">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="B95-mo-dd1" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="loginVC" automaticallyAdjustsScrollViewInsets="NO" id="B95-mo-dd1" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Spw-g8-TmU">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>

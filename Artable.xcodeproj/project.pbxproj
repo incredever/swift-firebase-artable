@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		69FE6AC8671B915734537BD0 /* Pods_Artable_Admin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F90B9F798AF24F8A85E4055 /* Pods_Artable_Admin.framework */; };
 		D15DDF3A9A745CE26433CA25 /* Pods_Artable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9E1172E1C50A2F07B8F771 /* Pods_Artable.framework */; };
+		E68807C8233676CE004A0B12 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E68807C7233676CE004A0B12 /* GoogleService-Info.plist */; };
+		E68807CA23367753004A0B12 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E68807C923367753004A0B12 /* GoogleService-Info.plist */; };
 		E6EDD72B233652780026168F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD72A233652780026168F /* AppDelegate.swift */; };
 		E6EDD72D233652780026168F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD72C233652780026168F /* ViewController.swift */; };
 		E6EDD730233652780026168F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6EDD72E233652780026168F /* Main.storyboard */; };
@@ -30,6 +32,8 @@
 		387DF67C2179F86FE58ECEBB /* Pods-Artable-Admin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artable-Admin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Artable-Admin/Pods-Artable-Admin.debug.xcconfig"; sourceTree = "<group>"; };
 		3F90B9F798AF24F8A85E4055 /* Pods_Artable_Admin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Artable_Admin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58FC65001CCE88CB9B6F4050 /* Pods-Artable-Admin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artable-Admin.release.xcconfig"; path = "Pods/Target Support Files/Pods-Artable-Admin/Pods-Artable-Admin.release.xcconfig"; sourceTree = "<group>"; };
+		E68807C7233676CE004A0B12 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E68807C923367753004A0B12 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E6EDD727233652780026168F /* Artable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Artable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6EDD72A233652780026168F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6EDD72C233652780026168F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +119,7 @@
 				E6EDD72A233652780026168F /* AppDelegate.swift */,
 				E6EDD72C233652780026168F /* ViewController.swift */,
 				E6EDD736233652780026168F /* Info.plist */,
+				E68807C7233676CE004A0B12 /* GoogleService-Info.plist */,
 			);
 			path = Artable;
 			sourceTree = "<group>";
@@ -128,6 +133,7 @@
 				E6EDD749233654080026168F /* Assets.xcassets */,
 				E6EDD74B233654080026168F /* LaunchScreen.storyboard */,
 				E6EDD74E233654080026168F /* Info.plist */,
+				E68807C923367753004A0B12 /* GoogleService-Info.plist */,
 			);
 			path = "Artable-Admin";
 			sourceTree = "<group>";
@@ -235,6 +241,7 @@
 			files = (
 				E6EDD758233656920026168F /* Login.storyboard in Resources */,
 				E6EDD735233652780026168F /* LaunchScreen.storyboard in Resources */,
+				E68807C8233676CE004A0B12 /* GoogleService-Info.plist in Resources */,
 				E6EDD732233652780026168F /* Assets.xcassets in Resources */,
 				E6EDD730233652780026168F /* Main.storyboard in Resources */,
 			);
@@ -246,6 +253,7 @@
 			files = (
 				E6EDD74D233654080026168F /* LaunchScreen.storyboard in Resources */,
 				E6EDD74A233654080026168F /* Assets.xcassets in Resources */,
+				E68807CA23367753004A0B12 /* GoogleService-Info.plist in Resources */,
 				E6EDD7532336541A0026168F /* Assets.xcassets in Resources */,
 				E6EDD748233654070026168F /* Main.storyboard in Resources */,
 			);
