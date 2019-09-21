@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="nSb-0i-O9v">
+            <objects>
+                <viewController id="H6G-9p-mMZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VTu-me-uvh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_left1" translatesAutoresizingMaskIntoConstraints="NO" id="qyz-jE-BrZ">
+                                <rect key="frame" x="0.0" y="0.0" width="375.00000000000045" height="812"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="bCP-sH-XMJ">
+                                <rect key="frame" x="20" y="117.99999999999997" width="335" height="371.33333333333326"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gc9-og-uWc">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="22.333333333333332"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                        <color key="textColor" red="0.22745098039215686" green="0.26666666666666666" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZKk-gX-CDt">
+                                        <rect key="frame" x="0.0" y="35.333333333333343" width="335" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="YXA-7w-ef1"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wlw-Kq-jce">
+                                        <rect key="frame" x="0.0" y="96.333333333333343" width="335" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="kTu-iJ-8se"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="anl-hO-UXm">
+                                        <rect key="frame" x="0.0" y="157.33333333333331" width="335" height="31"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                                        <state key="normal" title="Forgot password ?">
+                                            <color key="titleColor" red="0.83529411764705885" green="0.39215686274509803" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ose-sS-brt">
+                                        <rect key="frame" x="0.0" y="201.33333333333331" width="335" height="48"/>
+                                        <color key="backgroundColor" red="0.22745098039215686" green="0.26666666666666666" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="HVy-nN-Hdl"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                        <state key="normal" title="Log in">
+                                            <color key="titleColor" red="0.95294117647058818" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdg-FA-Ah4">
+                                        <rect key="frame" x="0.0" y="262.33333333333331" width="335" height="48"/>
+                                        <color key="backgroundColor" red="0.83529411764705885" green="0.39215686274509803" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="qkY-au-5BJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                        <state key="normal" title="Create new user">
+                                            <color key="titleColor" red="0.95294117647058818" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJQ-JO-3Uv">
+                                        <rect key="frame" x="0.0" y="323.33333333333331" width="335" height="48"/>
+                                        <color key="backgroundColor" white="0.67000000000000004" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="vm0-Zl-7eM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                        <state key="normal" title="Continue as guest">
+                                            <color key="titleColor" red="0.95294117647058818" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="aAm-d4-Pfu">
+                                <rect key="frame" x="169" y="272.33333333333331" width="37" height="37"/>
+                                <color key="color" red="0.22745098039215686" green="0.26666666666666666" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="qyz-jE-BrZ" secondAttribute="trailing" id="4z8-8T-i26"/>
+                            <constraint firstItem="qyz-jE-BrZ" firstAttribute="top" secondItem="VTu-me-uvh" secondAttribute="top" id="9xG-JV-RF2"/>
+                            <constraint firstItem="qyz-jE-BrZ" firstAttribute="leading" secondItem="VTu-me-uvh" secondAttribute="leading" id="EHb-T6-J54"/>
+                            <constraint firstItem="aAm-d4-Pfu" firstAttribute="centerX" secondItem="VTu-me-uvh" secondAttribute="centerX" id="N3i-Vq-enK"/>
+                            <constraint firstItem="AkQ-mK-p6f" firstAttribute="trailing" secondItem="bCP-sH-XMJ" secondAttribute="trailing" constant="20" id="Rhp-ZK-PL3"/>
+                            <constraint firstItem="bCP-sH-XMJ" firstAttribute="leading" secondItem="AkQ-mK-p6f" secondAttribute="leading" constant="20" id="aJS-br-ptE"/>
+                            <constraint firstAttribute="bottom" secondItem="qyz-jE-BrZ" secondAttribute="bottom" id="nm6-W5-LXf"/>
+                            <constraint firstItem="bCP-sH-XMJ" firstAttribute="top" secondItem="AkQ-mK-p6f" secondAttribute="top" constant="30" id="uAW-zy-Gmj"/>
+                            <constraint firstItem="aAm-d4-Pfu" firstAttribute="centerY" secondItem="anl-hO-UXm" secondAttribute="centerY" id="xIH-gH-Y3S"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AkQ-mK-p6f"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vEg-N7-fMj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n2c-M6-kfu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1130.4000000000001" y="-64.285714285714292"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7Tg-me-05R">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="B95-mo-dd1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Spw-g8-TmU">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="H6G-9p-mMZ" kind="relationship" relationship="rootViewController" id="MpM-Ac-Ebc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2w9-5D-0cx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="220.28985507246378" y="-63.616071428571423"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg_left1" width="1949" height="3441"/>
+    </resources>
+</document>

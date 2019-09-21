@@ -18,6 +18,7 @@
 		E6EDD74A233654080026168F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6EDD749233654080026168F /* Assets.xcassets */; };
 		E6EDD74D233654080026168F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6EDD74B233654080026168F /* LaunchScreen.storyboard */; };
 		E6EDD7532336541A0026168F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6EDD731233652780026168F /* Assets.xcassets */; };
+		E6EDD758233656920026168F /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6EDD757233656920026168F /* Login.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		E6EDD749233654080026168F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E6EDD74C233654080026168F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E6EDD74E233654080026168F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6EDD757233656920026168F /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,10 +79,9 @@
 		E6EDD729233652780026168F /* Artable */ = {
 			isa = PBXGroup;
 			children = (
+				E6EDD756233656660026168F /* Storyboard */,
 				E6EDD72A233652780026168F /* AppDelegate.swift */,
 				E6EDD72C233652780026168F /* ViewController.swift */,
-				E6EDD72E233652780026168F /* Main.storyboard */,
-				E6EDD733233652780026168F /* LaunchScreen.storyboard */,
 				E6EDD736233652780026168F /* Info.plist */,
 			);
 			path = Artable;
@@ -105,6 +106,16 @@
 				E6EDD731233652780026168F /* Assets.xcassets */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		E6EDD756233656660026168F /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				E6EDD72E233652780026168F /* Main.storyboard */,
+				E6EDD757233656920026168F /* Login.storyboard */,
+				E6EDD733233652780026168F /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +197,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6EDD758233656920026168F /* Login.storyboard in Resources */,
 				E6EDD735233652780026168F /* LaunchScreen.storyboard in Resources */,
 				E6EDD732233652780026168F /* Assets.xcassets in Resources */,
 				E6EDD730233652780026168F /* Main.storyboard in Resources */,
