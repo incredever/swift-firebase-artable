@@ -7,12 +7,18 @@
 //
 
 import UIKit
+import Firebase
 
 class ViewController: UIViewController {
-
+    
+    // MARK: - Variables
+    var firebase: NSObjectProtocol?
+    
+    
+    // MARK: - Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -20,6 +26,17 @@ class ViewController: UIViewController {
         let controller = storyboard.instantiateViewController(withIdentifier: "loginVC")
         present(controller, animated: true, completion: nil)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        firebase = Auth.auth().addStateDidChangeListener { (auth, user) in
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        Auth.auth().removeStateDidChangeListener(firebase!)
+    }
+    
+
 
 
 }

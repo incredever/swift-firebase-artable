@@ -11,6 +11,9 @@
 		D15DDF3A9A745CE26433CA25 /* Pods_Artable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9E1172E1C50A2F07B8F771 /* Pods_Artable.framework */; };
 		E68807C8233676CE004A0B12 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E68807C7233676CE004A0B12 /* GoogleService-Info.plist */; };
 		E68807CA23367753004A0B12 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E68807C923367753004A0B12 /* GoogleService-Info.plist */; };
+		E68807CF23368068004A0B12 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68807CE23368068004A0B12 /* LoginVC.swift */; };
+		E68807D3233680AB004A0B12 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68807D2233680AB004A0B12 /* RegisterVC.swift */; };
+		E68807D523369A5A004A0B12 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68807D423369A5A004A0B12 /* ActionButton.swift */; };
 		E6EDD72B233652780026168F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD72A233652780026168F /* AppDelegate.swift */; };
 		E6EDD72D233652780026168F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD72C233652780026168F /* ViewController.swift */; };
 		E6EDD730233652780026168F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6EDD72E233652780026168F /* Main.storyboard */; };
@@ -34,6 +37,9 @@
 		58FC65001CCE88CB9B6F4050 /* Pods-Artable-Admin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artable-Admin.release.xcconfig"; path = "Pods/Target Support Files/Pods-Artable-Admin/Pods-Artable-Admin.release.xcconfig"; sourceTree = "<group>"; };
 		E68807C7233676CE004A0B12 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E68807C923367753004A0B12 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E68807CE23368068004A0B12 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		E68807D2233680AB004A0B12 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		E68807D423369A5A004A0B12 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		E6EDD727233652780026168F /* Artable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Artable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6EDD72A233652780026168F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6EDD72C233652780026168F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +97,31 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E68807CB23368036004A0B12 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E68807CE23368068004A0B12 /* LoginVC.swift */,
+				E68807D2233680AB004A0B12 /* RegisterVC.swift */,
+				E6EDD72C233652780026168F /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E68807CC2336804D004A0B12 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E68807D423369A5A004A0B12 /* ActionButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E68807CD23368053004A0B12 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		E6EDD71E233652780026168F = {
 			isa = PBXGroup;
 			children = (
@@ -115,9 +146,11 @@
 		E6EDD729233652780026168F /* Artable */ = {
 			isa = PBXGroup;
 			children = (
+				E68807CD23368053004A0B12 /* Model */,
+				E68807CC2336804D004A0B12 /* View */,
+				E68807CB23368036004A0B12 /* Controller */,
 				E6EDD756233656660026168F /* Storyboard */,
 				E6EDD72A233652780026168F /* AppDelegate.swift */,
-				E6EDD72C233652780026168F /* ViewController.swift */,
 				E6EDD736233652780026168F /* Info.plist */,
 				E68807C7233676CE004A0B12 /* GoogleService-Info.plist */,
 			);
@@ -380,7 +413,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6EDD72D233652780026168F /* ViewController.swift in Sources */,
+				E68807D3233680AB004A0B12 /* RegisterVC.swift in Sources */,
 				E6EDD72B233652780026168F /* AppDelegate.swift in Sources */,
+				E68807CF23368068004A0B12 /* LoginVC.swift in Sources */,
+				E68807D523369A5A004A0B12 /* ActionButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

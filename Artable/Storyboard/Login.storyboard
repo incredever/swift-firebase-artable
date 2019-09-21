@@ -10,16 +10,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--LoginVC-->
         <scene sceneID="nSb-0i-O9v">
             <objects>
-                <viewController id="H6G-9p-mMZ" sceneMemberID="viewController">
+                <viewController id="H6G-9p-mMZ" customClass="LoginVC" customModule="Artable" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VTu-me-uvh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_left1" translatesAutoresizingMaskIntoConstraints="NO" id="qyz-jE-BrZ">
-                                <rect key="frame" x="0.0" y="0.0" width="375.00000000000045" height="812"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="bCP-sH-XMJ">
                                 <rect key="frame" x="20" y="117.99999999999997" width="335" height="371.33333333333326"/>
@@ -118,10 +118,10 @@
             </objects>
             <point key="canvasLocation" x="1130.4000000000001" y="-64.285714285714292"/>
         </scene>
-        <!--View Controller-->
+        <!--RegisterVC-->
         <scene sceneID="Zn9-Td-LTN">
             <objects>
-                <viewController id="mCc-AD-c8f" sceneMemberID="viewController">
+                <viewController id="mCc-AD-c8f" customClass="RegisterVC" customModule="Artable" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GXq-MJ-n6v">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -174,7 +174,7 @@
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7of-LV-RjJ">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7of-LV-RjJ" customClass="ActionButton" customModule="Artable" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="279.33333333333331" width="335" height="48"/>
                                         <color key="backgroundColor" red="0.83529411764705885" green="0.39215686274509803" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -184,21 +184,24 @@
                                         <state key="normal" title="Register">
                                             <color key="titleColor" red="0.95294117647058818" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="registerButtonClicked:" destination="mCc-AD-c8f" eventType="touchUpInside" id="jif-J4-4Nf"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="TXx-3w-SoV">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="TXx-3w-SoV">
                                 <rect key="frame" x="169" y="470.33333333333331" width="37" height="37"/>
                                 <color key="color" red="0.2274509804" green="0.2666666667" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red_check" translatesAutoresizingMaskIntoConstraints="NO" id="MEH-RL-tdD">
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red_check" translatesAutoresizingMaskIntoConstraints="NO" id="MEH-RL-tdD">
                                 <rect key="frame" x="318" y="286.33333333333331" width="26" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="26" id="avj-Ix-gqO"/>
                                     <constraint firstAttribute="height" constant="26" id="ogE-hz-6Pc"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red_check" translatesAutoresizingMaskIntoConstraints="NO" id="Do4-qG-tub">
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red_check" translatesAutoresizingMaskIntoConstraints="NO" id="Do4-qG-tub">
                                 <rect key="frame" x="318" y="347.33333333333331" width="26" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="26" id="TKm-kf-8ib"/>
@@ -224,6 +227,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="C7Q-Og-5w1"/>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="TXx-3w-SoV" id="cbL-BN-wc9"/>
+                        <outlet property="confirmPassCheckImage" destination="Do4-qG-tub" id="ODE-UO-CoZ"/>
+                        <outlet property="confirmPasswordTextField" destination="yG6-an-ciB" id="Wdu-Qt-DeK"/>
+                        <outlet property="emailTextField" destination="02Y-bt-i03" id="fPM-UZ-NqL"/>
+                        <outlet property="passCheckImage" destination="MEH-RL-tdD" id="U9Z-WG-NIN"/>
+                        <outlet property="passwordTextField" destination="jei-dX-1Uh" id="Vj8-qA-4SC"/>
+                        <outlet property="registerButton" destination="7of-LV-RjJ" id="jG8-wi-sMt"/>
+                        <outlet property="usernameTextField" destination="gQw-B6-t4r" id="Sqp-jb-YZn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="imm-O3-bN4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
