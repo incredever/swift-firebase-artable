@@ -13,7 +13,8 @@
 		E68807CA23367753004A0B12 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E68807C923367753004A0B12 /* GoogleService-Info.plist */; };
 		E68807CF23368068004A0B12 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68807CE23368068004A0B12 /* LoginVC.swift */; };
 		E68807D3233680AB004A0B12 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68807D2233680AB004A0B12 /* RegisterVC.swift */; };
-		E68807D523369A5A004A0B12 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68807D423369A5A004A0B12 /* ActionButton.swift */; };
+		E68807D82336F9C5004A0B12 /* RoundedViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68807D72336F9C5004A0B12 /* RoundedViews.swift */; };
+		E68807DC2336FA80004A0B12 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68807DB2336FA80004A0B12 /* Constants.swift */; };
 		E6EDD72B233652780026168F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD72A233652780026168F /* AppDelegate.swift */; };
 		E6EDD72D233652780026168F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD72C233652780026168F /* ViewController.swift */; };
 		E6EDD730233652780026168F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6EDD72E233652780026168F /* Main.storyboard */; };
@@ -39,7 +40,8 @@
 		E68807C923367753004A0B12 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E68807CE23368068004A0B12 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		E68807D2233680AB004A0B12 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
-		E68807D423369A5A004A0B12 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		E68807D72336F9C5004A0B12 /* RoundedViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedViews.swift; sourceTree = "<group>"; };
+		E68807DB2336FA80004A0B12 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E6EDD727233652780026168F /* Artable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Artable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6EDD72A233652780026168F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6EDD72C233652780026168F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -110,7 +112,6 @@
 		E68807CC2336804D004A0B12 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E68807D423369A5A004A0B12 /* ActionButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -120,6 +121,22 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		E68807D62336F957004A0B12 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E68807D72336F9C5004A0B12 /* RoundedViews.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E68807D92336FA4B004A0B12 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E68807DB2336FA80004A0B12 /* Constants.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		E6EDD71E233652780026168F = {
@@ -174,6 +191,8 @@
 		E6EDD7522336540F0026168F /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				E68807D92336FA4B004A0B12 /* Utilities */,
+				E68807D62336F957004A0B12 /* Views */,
 				E6EDD731233652780026168F /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -412,11 +431,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E68807D82336F9C5004A0B12 /* RoundedViews.swift in Sources */,
 				E6EDD72D233652780026168F /* ViewController.swift in Sources */,
 				E68807D3233680AB004A0B12 /* RegisterVC.swift in Sources */,
 				E6EDD72B233652780026168F /* AppDelegate.swift in Sources */,
+				E68807DC2336FA80004A0B12 /* Constants.swift in Sources */,
 				E68807CF23368068004A0B12 /* LoginVC.swift in Sources */,
-				E68807D523369A5A004A0B12 /* ActionButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

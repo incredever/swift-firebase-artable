@@ -81,8 +81,8 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
     }
     
     private func setCheckMarksColor(to color: String) {
-        passCheckImage.image = UIImage(named: "\(color)_check")
-        confirmPassCheckImage.image = UIImage(named: "\(color)_check")
+        passCheckImage.image = UIImage(named: color)
+        confirmPassCheckImage.image = UIImage(named: color)
     }
     
     private func setCheckMarksState() {
@@ -95,7 +95,7 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
         setCheckMarksState()
         
         // Handle check marks color
-        passwordTextField.text == confirmPasswordTextField.text ? setCheckMarksColor(to: "green") : setCheckMarksColor(to: "red")
+        passwordTextField.text == confirmPasswordTextField.text ? setCheckMarksColor(to: IMAGE.CHECK_MARK_GREEN) : setCheckMarksColor(to: IMAGE.CHECK_MARK_RED)
         
         // Handle 'register' button
         if !usernameTextField.text!.isEmpty && !emailTextField.text!.isEmpty && !passwordTextField.text!.isEmpty && !confirmPasswordTextField.text!.isEmpty {
