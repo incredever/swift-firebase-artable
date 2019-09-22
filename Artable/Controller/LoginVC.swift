@@ -7,24 +7,80 @@
 //
 
 import UIKit
+import Firebase
 
-class LoginVC: UIViewController {
-
+class LoginVC: UIViewController, UITextFieldDelegate {
+    
+    // MARK: - IBOutlets
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginButton: RoundedButton!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    
+    // MARK: - Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        loginButton.isEnabled = false
+        addTextFieldTargets()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    // MARK: - Functions
+    private func setDelegates() {
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
     }
-    */
-
+    
+    private func addTextFieldTargets() {
+        emailTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: UIControl.Event.editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: UIControl.Event.editingChanged)
+    }
+    
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        // Handle Login button
+        loginButton.isEnabled = !emailTextField.text!.isEmpty && !passwordTextField.text!.isEmpty ? true : false
+        
+        // Handle password text field
+        if emailTextField.text!.isEmpty {
+            passwordTextField.text = ""
+        }
+    }
+    
+    @IBAction func loginButtonClicked(_ sender: UIButton) {
+        // Star animation
+        activityIndicator.startAnimating()
+        
+        // Attempt login
+        guard let email = emailTextField.text, !email.isEmpty,
+            let password = passwordTextField.text, !password.isEmpty
+        else {
+            return
+        }
+        
+        Auth.auth().signIn(withEmail: email, password: password) { [weak self] user, error in
+            guard let strongSelf = self else { return }
+            
+            // Handle error(s)
+            guard error == nil else {
+                print("CUSTOM ERROR: Unable to sign-in ~> \(error!.localizedDescription)")
+                strongSelf.activityIndicator.stopAnimating()
+                return
+            }
+            
+            if let user = user {
+                print("Login successful")
+                self?.dismiss(animated: true, completion: nil)
+            }
+            strongSelf.activityIndicator.stopAnimating()
+        }
+    }
+    
+    @IBAction func forgotPasswordButtonClicked(_ sender: UIButton) {
+    }
+    
+    @IBAction func continueGuestButton(_ sender: UIButton) {
+    }
+    
 }

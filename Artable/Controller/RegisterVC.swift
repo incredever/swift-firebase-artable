@@ -62,6 +62,7 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
             if let user = authResult?.user {
                 print("Successfully register new user: \(user)")
                 self.activityIndicator.stopAnimating()
+                self.dismiss(animated: true, completion: nil)
             }
         }
     }
@@ -121,3 +122,4 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
     }
     
 }
+

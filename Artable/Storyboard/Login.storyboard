@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_left1" translatesAutoresizingMaskIntoConstraints="NO" id="qyz-jE-BrZ">
-                                <rect key="frame" x="0.0" y="0.0" width="375.00000000000045" height="812"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="bCP-sH-XMJ">
                                 <rect key="frame" x="20" y="117.99999999999997" width="335" height="371.33333333333326"/>
@@ -54,8 +54,11 @@
                                         <state key="normal" title="Forgot password ?">
                                             <color key="titleColor" red="0.83529411764705885" green="0.39215686274509803" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="forgotPasswordButtonClicked:" destination="H6G-9p-mMZ" eventType="touchUpInside" id="i5D-sF-VrD"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ose-sS-brt" customClass="RoundedButton" customModule="Artable" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ose-sS-brt" customClass="BlueActionButton" customModule="Artable" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="201.33333333333331" width="335" height="48"/>
                                         <color key="backgroundColor" red="0.22745098039215686" green="0.26666666666666666" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -65,6 +68,9 @@
                                         <state key="normal" title="Log in">
                                             <color key="titleColor" red="0.95294117647058818" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="loginButtonClicked:" destination="H6G-9p-mMZ" eventType="touchUpInside" id="DFP-b9-pOR"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdg-FA-Ah4" customClass="RoundedButton" customModule="Artable" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="262.33333333333331" width="335" height="48"/>
@@ -90,6 +96,9 @@
                                         <state key="normal" title="Continue as guest">
                                             <color key="titleColor" red="0.95294117647058818" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="continueGuestButton:" destination="H6G-9p-mMZ" eventType="touchUpInside" id="0sL-Ti-fAO"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -113,6 +122,12 @@
                         <viewLayoutGuide key="safeArea" id="AkQ-mK-p6f"/>
                     </view>
                     <navigationItem key="navigationItem" id="vEg-N7-fMj"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="aAm-d4-Pfu" id="lvQ-th-WZz"/>
+                        <outlet property="emailTextField" destination="ZKk-gX-CDt" id="6yy-Se-T6h"/>
+                        <outlet property="loginButton" destination="ose-sS-brt" id="vYl-Su-gKw"/>
+                        <outlet property="passwordTextField" destination="wlw-Kq-jce" id="Soi-4e-8o5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n2c-M6-kfu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -174,7 +189,7 @@
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7of-LV-RjJ" customClass="ActionButton" customModule="Artable" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7of-LV-RjJ" customClass="RedActionButton" customModule="Artable" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="279.33333333333331" width="335" height="48"/>
                                         <color key="backgroundColor" red="0.83529411764705885" green="0.39215686274509803" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>

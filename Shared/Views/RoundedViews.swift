@@ -15,12 +15,23 @@ class RoundedButton: UIButton {
     }
 }
 
-class ActionButton: RoundedButton {
+class RedActionButton: RoundedButton {
     override var isEnabled: Bool {
         didSet {
             UIView.animate(withDuration: 0.175) {
                 self.alpha = self.isEnabled ? 1.0 : 0.6
                 self.backgroundColor = self.isEnabled ? COLOR.RED : COLOR.LIGHT_GRAY
+            }
+        }
+    }
+}
+
+class BlueActionButton: RoundedButton {
+    override var isEnabled: Bool {
+        didSet {
+            UIView.animate(withDuration: 0.175) {
+                self.alpha = self.isEnabled ? 1.0 : 0.6
+                self.backgroundColor = self.isEnabled ? COLOR.BLUE : COLOR.LIGHT_GRAY
             }
         }
     }
