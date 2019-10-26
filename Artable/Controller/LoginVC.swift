@@ -64,12 +64,13 @@ class LoginVC: UIViewController, UITextFieldDelegate {
             
             // Handle error(s)
             guard error == nil else {
-                print("CUSTOM ERROR: Unable to sign-in ~> \(error!.localizedDescription)")
+                self?.handleFireAuthError(error: error!)
+                strongSelf.handleFireAuthError(error: error!)
                 strongSelf.activityIndicator.stopAnimating()
                 return
             }
             
-            if let user = user {
+            if let _ = user {
                 print("Login successful")
                 self?.dismiss(animated: true, completion: nil)
             }
@@ -78,6 +79,10 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func forgotPasswordButtonClicked(_ sender: UIButton) {
+        let vc = ForgotPasswordVC()
+        vc.modalTransitionStyle = .crossDissolve
+        vc.modalPresentationStyle = .overCurrentContext
+        present(vc, animated: true, completion: nil)
     }
     
     @IBAction func continueGuestButton(_ sender: UIButton) {

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCell" id="gTV-IL-0wX" customClass="CategoryCell" customModule="Artable" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="172" height="214"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="172" height="214"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aerial_2" translatesAutoresizingMaskIntoConstraints="NO" id="5AP-g7-WXY">
+                        <rect key="frame" x="0.0" y="0.0" width="172" height="176"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="LGi-sF-M5c">
+                        <rect key="frame" x="8" y="176" width="156" height="38"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="38" id="BUr-Ql-B5H"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="LGi-sF-M5c" secondAttribute="trailing" constant="8" id="6vl-rl-wkv"/>
+                <constraint firstItem="LGi-sF-M5c" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="ORg-Np-RIt"/>
+                <constraint firstItem="LGi-sF-M5c" firstAttribute="top" secondItem="5AP-g7-WXY" secondAttribute="bottom" id="SLg-An-GHh"/>
+                <constraint firstAttribute="bottom" secondItem="LGi-sF-M5c" secondAttribute="bottom" id="WgZ-Lh-l52"/>
+                <constraint firstItem="5AP-g7-WXY" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="YEo-0T-h6Y"/>
+                <constraint firstItem="5AP-g7-WXY" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="aKR-Dm-MHW"/>
+                <constraint firstAttribute="trailing" secondItem="5AP-g7-WXY" secondAttribute="trailing" id="mu1-j8-oZ8"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="172" height="214"/>
+            <connections>
+                <outlet property="categoryImage" destination="5AP-g7-WXY" id="0ES-mM-kVo"/>
+                <outlet property="categoryLabel" destination="LGi-sF-M5c" id="0dZ-Jm-tsJ"/>
+            </connections>
+            <point key="canvasLocation" x="-50.724637681159422" y="66.964285714285708"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="aerial_2" width="1000" height="1778"/>
+    </resources>
+</document>

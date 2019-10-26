@@ -39,7 +39,7 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
     
     
     // MARK: - Private Functions
-    private func signUp() {
+    private func registerUser() {
         
         // Unwrap 'email' and 'password' values
         guard let email = emailTextField.text, !email.isEmpty,
@@ -49,22 +49,35 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
         
         activityIndicator.startAnimating()
         
-        // Create new user on Firebase
-        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
-            
+        // Check current user (anonymous)
+        guard let userAuth = Auth.auth().currentUser else {
+            activityIndicator.stopAnimating()
+            return
+        }
+        
+        // Create credentials
+        let credentials = EmailAuthProvider.credential(withEmail: email, password: password)
+        
+        // Link credentials to current anonymous user
+        userAuth.link(with: credentials) { (result, error) in
             // Check for error(s)
             if let error = error {
-                print("CUSTOM ERROR: Unable to add new user to Database ~> \(error.localizedDescription)")
+                self.handleFireAuthError(error: error)
                 self.activityIndicator.stopAnimating()
                 return
             }
             
-            if let user = authResult?.user {
-                print("Successfully register new user: \(user)")
-                self.activityIndicator.stopAnimating()
-                self.dismiss(animated: true, completion: nil)
-            }
+            print("New user successfully registered.")
+            self.activityIndicator.stopAnimating()
+            self.dismiss(animated: true, completion: nil)
         }
+        
+//        // Create new user on Firebase
+//        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+//
+//
+//
+//        }
     }
     
     private func setDelegates() {
@@ -81,13 +94,12 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
         confirmPasswordTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: UIControl.Event.editingChanged)
     }
     
-    private func setCheckMarksColor(to color: String) {
-        passCheckImage.image = UIImage(named: color)
-        confirmPassCheckImage.image = UIImage(named: color)
+    private func setCheckMarksColor(for imageView: UIImageView, to color: String) {
+        imageView.image = UIImage(named: color)
     }
     
     private func setCheckMarksState() {
-        passCheckImage.isHidden = confirmPasswordTextField.text!.isEmpty ? true : false
+        passCheckImage.isHidden = passwordTextField.text!.isEmpty ? true : false
         confirmPassCheckImage.isHidden = confirmPasswordTextField.text!.isEmpty ? true : false
     }
     
@@ -95,11 +107,14 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
         // Handle check mark visibility
         setCheckMarksState()
         
-        // Handle check marks color
-        passwordTextField.text == confirmPasswordTextField.text ? setCheckMarksColor(to: IMAGE.CHECK_MARK_GREEN) : setCheckMarksColor(to: IMAGE.CHECK_MARK_RED)
+        // Handle password check mark color
+        passwordTextField.text!.count >= 6 ? setCheckMarksColor(for: passCheckImage, to: IMAGE.CHECK_MARK_GREEN) : setCheckMarksColor(for: passCheckImage, to: IMAGE.CHECK_MARK_RED)
+        
+        // Handle confirm password check mark color
+        passwordTextField.text == confirmPasswordTextField.text ? setCheckMarksColor(for: confirmPassCheckImage, to: IMAGE.CHECK_MARK_GREEN) : setCheckMarksColor(for: confirmPassCheckImage, to: IMAGE.CHECK_MARK_RED)
         
         // Handle 'register' button
-        if !usernameTextField.text!.isEmpty && !emailTextField.text!.isEmpty && !passwordTextField.text!.isEmpty && !confirmPasswordTextField.text!.isEmpty {
+        if !usernameTextField.text!.isEmpty && !emailTextField.text!.isEmpty && !passwordTextField.text!.isEmpty && !confirmPasswordTextField.text!.isEmpty && passwordTextField.text!.count > 5 {
             
             registerButton.isEnabled = passwordTextField.text == confirmPasswordTextField.text ? true : false
             
@@ -118,7 +133,7 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
 
     // MARK: - IBActions
     @IBAction func registerButtonClicked(_ sender: Any) {
-        signUp()
+        registerUser()
     }
     
 }

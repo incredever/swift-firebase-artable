@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProductCell" rowHeight="186" id="KGk-i7-Jjw" customClass="ProductCell" customModule="Artable" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="186"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="400" height="185.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jKZ-Oj-RPg" customClass="RoundedShadowView" customModule="Artable" customModuleProvider="target">
+                        <rect key="frame" x="10" y="5" width="380" height="175.5"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tBb-OW-EFe">
+                                <rect key="frame" x="344" y="10" width="26" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="66d-vM-G9w"/>
+                                    <constraint firstAttribute="width" constant="26" id="zFP-dF-sYd"/>
+                                </constraints>
+                                <state key="normal" image="empty_star"/>
+                                <connections>
+                                    <action selector="favoriteButtonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="x4F-3j-f7L"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="EdE-kc-Q3Y">
+                                <rect key="frame" x="10" y="10" width="360" height="155.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aerial_2" translatesAutoresizingMaskIntoConstraints="NO" id="d88-M3-dk0" customClass="RoundedImageView" customModule="Artable" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="155.5" height="155.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="d88-M3-dk0" secondAttribute="height" id="19d-bz-dq5"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ocN-Mp-8z4">
+                                        <rect key="frame" x="165.5" y="26" width="194.5" height="104"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gx-8p-Idc">
+                                                <rect key="frame" x="50" y="0.0" width="94.5" height="22.5"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                <color key="textColor" red="0.19215686269999999" green="0.2666666667" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$49.99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgl-ij-ySV">
+                                                <rect key="frame" x="49.5" y="28.5" width="95.5" height="36.5"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="28"/>
+                                                <color key="textColor" red="0.19215686269999999" green="0.2666666667" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YZe-36-fEE" customClass="RedActionButton" customModule="Artable" customModuleProvider="target">
+                                                <rect key="frame" x="43" y="71" width="109" height="33"/>
+                                                <color key="backgroundColor" red="0.83529411764705885" green="0.39215686274509803" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                <inset key="contentEdgeInsets" minX="10" minY="5" maxX="10" maxY="5"/>
+                                                <state key="normal" title="Add to cart">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="addToCartButtonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="dTJ-Ix-S3o"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="EdE-kc-Q3Y" secondAttribute="trailing" constant="10" id="1Ui-FH-KGq"/>
+                            <constraint firstItem="EdE-kc-Q3Y" firstAttribute="leading" secondItem="jKZ-Oj-RPg" secondAttribute="leading" constant="10" id="2zm-Ka-Pxz"/>
+                            <constraint firstAttribute="trailing" secondItem="tBb-OW-EFe" secondAttribute="trailing" constant="10" id="8mN-st-uPe"/>
+                            <constraint firstItem="EdE-kc-Q3Y" firstAttribute="top" secondItem="jKZ-Oj-RPg" secondAttribute="top" constant="10" id="Ath-dg-hvw"/>
+                            <constraint firstItem="tBb-OW-EFe" firstAttribute="top" secondItem="jKZ-Oj-RPg" secondAttribute="top" constant="10" id="nwl-rS-YyF"/>
+                            <constraint firstAttribute="bottom" secondItem="EdE-kc-Q3Y" secondAttribute="bottom" constant="10" id="sKM-Es-ZAD"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="jKZ-Oj-RPg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="HlE-dl-evq"/>
+                    <constraint firstItem="jKZ-Oj-RPg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="Le1-5A-aai"/>
+                    <constraint firstAttribute="bottom" secondItem="jKZ-Oj-RPg" secondAttribute="bottom" constant="5" id="Vhd-UG-cN0"/>
+                    <constraint firstAttribute="trailing" secondItem="jKZ-Oj-RPg" secondAttribute="trailing" constant="10" id="gnb-S1-drz"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="productFavStar" destination="tBb-OW-EFe" id="JZp-ai-okQ"/>
+                <outlet property="productImage" destination="d88-M3-dk0" id="lai-pL-DNb"/>
+                <outlet property="productPrice" destination="qgl-ij-ySV" id="H1k-jt-CDM"/>
+                <outlet property="productTitle" destination="3gx-8p-Idc" id="zB5-jP-GEH"/>
+            </connections>
+            <point key="canvasLocation" x="92.753623188405811" y="81.026785714285708"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="aerial_2" width="1000" height="1778"/>
+        <image name="empty_star" width="47" height="47"/>
+    </resources>
+</document>
